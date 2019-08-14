@@ -1,5 +1,6 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "Hi, Prof Rice!" << std::endl;
+    cout << "Hi, Prof Rice!" << endl;
 }
