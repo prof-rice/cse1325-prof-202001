@@ -1,8 +1,12 @@
 CXXFLAGS = --std=c++17
 
-hello: 
-	$(CXX) $(CXXFLAGS) -o hello hello.cpp
-	$(CXX) $(CXXFLAGS) -o hello_getline hello_getline.cpp
+all: hello hello_getline
+
+hello: hello.cpp
+	$(CXX) $(CXXFLAGS) hello.cpp -o hello
+
+hello_getline: hello_getline.cpp
+	$(CXX) $(CXXFLAGS) hello_getline.cpp -o hello_getline
 
 clean:
-	-rm -f *.o *~ hello hello_getline
+	-rm -f *.o *~ a.out hello hello_getline
