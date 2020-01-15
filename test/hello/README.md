@@ -34,6 +34,8 @@ Since commands can be separated on a single line using ;, you can also do this:
 
 Annotated hello.cpp:
 
+```
+
 // Two slashes starts a comment, which is ignored by g++.
 
 // This includes the "Input Output Stream" library for use in this file
@@ -50,9 +52,13 @@ int main() {
   cout << "Hello, world!" << endl;
 }
 
+```
+
 ---
 
 Annotated Makefile
+
+```
 
 # A single pound (hash) starts a comment, which is ignored by make
 
@@ -96,3 +102,6 @@ clean:
 # You may notice above that in a Makefile, the bash commands ALWAYS start
 #   with a TAB character (not 8 spaces!). This is a requirement for a
 #   Makefile, not for bash.
+
+```
+
