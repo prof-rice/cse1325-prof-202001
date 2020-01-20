@@ -1,11 +1,9 @@
-===========
 Full Credit
 ===========
 
 Your full credit solution always goes in the full_credit subdirectory - capitalization and underlines matters! *You must complete the full credit assignment to get any credit for the bonus assignment, and you must complete the bonus assignment to get any credit for the extreme bonus assignment!*
 
-Step-by-step instructions
-=========================
+## Step-by-step instructions
 
 1. Create a **private** GitHub account, and post its name as your solution to Assignment P1 in Canvas. 
 2. On GitHub, create a GitHub repository **named cse1325** (capitalization matters!),

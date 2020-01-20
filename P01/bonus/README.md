@@ -1,11 +1,9 @@
-=====
 Bonus
 =====
 
 Your bonus solution always goes in the bonus subdirectory - capitalization matters! Again, *you must complete the full credit assignment to get any credit for the bonus assignment, and you must complete the bonus assignment to get any credit for the extreme bonus assignment!*
 
-Step-by-step instructions
-=========================
+## Step-by-step instructions
 
 1. Create a P01/bonus subdirectory, using e.g., ``cd ; mkcd cse1325/P01/bonus``.
 2. Copy your full_credit solution, e.g., ``cp ../full_credit/hello.cpp .`` (note the trailing period, which means "this directory").
