@@ -1,9 +1,7 @@
-=========================
 Lecture 01 - Intro to C++
 =========================
 
-Source Code
-===========
+## Source Code
 
 This directory contains code similar to that which I (hope to) develop "live" in class, as well as any supplemental material.
 
@@ -11,15 +9,13 @@ The ``code_from_slides`` subdirectory will contain compilable code that you may 
 
 * Directories that I give you containing code will always include a Makefile. Just type ``make`` to build all of the code, or at least to obtain further instructions.
 
-Searching for Keywords
-======================
+## Searching for Keywords
 
 To search for source files containing a specific word such as "override", try e.g., ``grep override *``. If you're searching for a phrase containing spaces such as "multiple inheritance", put them in double quotes, e.g., ``grep "multiple inheritance" *``.
 
 You can also search through the slides and other PDF documents, too, if you put them in a common directory under Linux. To find "multiple inheritance" in a directory containing files with a .pdf extension, try ``pdfgrep "multiple inheritance" *.pdf``. Note that Linux cares about file name capitalization, so if you use the more Windows-like .PDF extension, use ``pdfgrep "multiple inheritance" *.PDF`` instead!
 
-bash_aliases.txt
-================
+## bash_aliases.txt
 
 This file contains a set of extentions to bash. For example, it allows you to just type ``e main.cpp`` to invoke whatever editor you've associated with .cpp files, exactly as if you'd double-clicked main.cpp.
 
