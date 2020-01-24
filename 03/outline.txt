@@ -1,0 +1,26 @@
+01_enum.cpp                    - Enum primary colors
+02_named_enum.cpp              - +type name (Color)
+03_enum_variables.cpp          - +Color color =
+04_enum_to_string.cpp          - +to_string array
+05_enum_to_string_vector.cpp   - ~const static vector to_string
+06_enum_to_string_function.cpp - +enum Size +overloaded to_string fns
+07_enum_to_string_switch.cpp   - ~vector to switch
+
+10_enum_class.cpp                - ~enum to enum class, fix vector (save)
+11_enum_class_map.cpp            - -Size ~vector/switch to map
+12_struct.cpp                    - +struct around enum w/var w/vector in to_string
+13_struct_switch.cpp             - ~vector to switch
+14_class.cpp                     - ~struct to class, ~to_string to method
+15_vector_and_string_classes.cpp - print color.to_string(), .size(), v.size()
+16_private_data.cpp              - +private _red..., static const color RED
+17_separate_body.cpp             - Move implemenation separate from spec
+18_main.cpp                      - Split into main.cpp, color.h, and color.cpp
+19_main.cpp                      - Interface first, and iterate vector<Color>
+
+20_cell.cpp - 20x20 grid of Cells in main, print using ternary
+21_grid.cpp - Move grid to Grid, with constructor
+22_main.cpp - Split into grid.h, grid.cpp, and main.cpp
+23_main.cpp - Add num_adjacent(int x, int y);
+24_main.cpp - Add Grid(Grid& grid) constructor for generations
+25_main.cpp - Finish out main CLI, and make grid 80x40
+
