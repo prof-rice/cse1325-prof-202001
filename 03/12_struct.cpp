@@ -1,17 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
-struct Color {
-  enum {RED, GREEN, BLUE} color;
-};
-
-std::string to_string(Color color) {
-  const static std::vector<std::string> Color_to_string = {
-    "Red", "Green", "Blue"};
-  return Color_to_string[color.color];  // Index on the color member of Color
+enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
+std::string to_string(Month month) {
+    std::vector<std::string> v = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    return v[month];
 }
 
+struct Date {
+    int year;
+    Month month;
+    int day;
+};
+
 int main() {
-  Color color = Color{Color::GREEN};
-  std::cout << to_string(color) << std::endl;
+    Date date{1969, JUL, 20};
+    std::cout << date.year << ' '
+              << to_string(date.month) << ' '
+              << date.day << std::endl;
 }

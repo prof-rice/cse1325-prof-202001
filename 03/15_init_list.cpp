@@ -14,11 +14,11 @@ class Date {
     Month month;
     int day;
   public:
-    Date(int y, Month m, int d) {
-        if (1 <= d && d <= 31) day = d;
-        else {std::cerr << "Invalid day: " << std::to_string(d) << std::endl; exit(1);}
-        month = m;
-        year = y;
+    Date(int y, Month m, int d) : year{y}, month{m}, day{d} {
+        if (31 < d || d < 1) {
+            std::cerr << "Invalid day: " << std::to_string(d) << std::endl; 
+            exit(1);
+        }
     }
     std::string to_string() {
         return std::to_string(year) + " "
@@ -29,9 +29,9 @@ class Date {
 
 int main() {
     Date moon{1969, JUL, 20};
-    // Date space{12, APR, 1961}; // Runtime: "Invalid day: 1961"
+    Date space{1961, APR, 12};
     std::cout << moon.to_string() << std::endl;
-    // std::cout << space.to_string() << std::endl << std::endl;
+    std::cout << space.to_string() << std::endl;
     // ++moon.day; // Compiler: "error: ‘int Date::day’ is private"
     // ++space.day;
     // std::cout << to_string(moon) << std::endl;

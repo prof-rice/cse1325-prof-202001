@@ -1,8 +1,8 @@
 #include <iostream>
 
-enum Color {RED, GREEN, BLUE};
+enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
 int main() {
-  Color color = GREEN;
-  std::cout << color << std::endl;
+    Month month = JUL;
+    std::cout << month << std::endl;
 }

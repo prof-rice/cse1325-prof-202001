@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 
-enum Color {RED, GREEN, BLUE};
-const static std::vector<std::string> Color_to_string = {
-    "Red", "Green", "Blue"};
+enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
+std::vector<std::string> to_string = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 int main() {
-  Color color = GREEN;
-  std::cout << Color_to_string[color] << std::endl;
+    Month month = JUL;
+    std::cout << to_string[month] << std::endl;
 }

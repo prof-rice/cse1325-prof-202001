@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <map>
 
 enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 std::string to_string(Month month) {
@@ -9,20 +8,19 @@ std::string to_string(Month month) {
     return v[month];
 }
 
-enum class Size {SMALL, MEDIUM, LARGE};
+enum Size {SMALL, MEDIUM, LARGE};
 std::string to_string(Size size) {
-    // A map is like a vector, except you can use any type for the subscript!
-    std::map<Size, std::string> m = {
-        { Size::SMALL  , "Small"},
-        { Size::MEDIUM , "Medium"},
-        { Size::LARGE  , "Large"},
-    };
-    return m[size];
+    switch (size) {
+        case SMALL  : return "Small";
+        case MEDIUM : return "Medium";
+        case LARGE  : return "Large";
+
+    }
 }
 
 int main() {
     Month month = JUL;
-    Size size = Size::MEDIUM;
+    Size size = MEDIUM;
     std::cout << to_string(month) << std::endl;
     std::cout << to_string(size) << std::endl;
 

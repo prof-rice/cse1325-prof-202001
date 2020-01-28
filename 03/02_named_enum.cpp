@@ -1,9 +1,9 @@
 #include <iostream>
 
-enum Color {RED, GREEN, BLUE};
+enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
 int main() {
-  std::cout << RED << ' '
-            << GREEN  << ' '
-            << BLUE << std::endl;
+    std::cout << JAN << ' '
+              << FEB << ' '
+              << DEC << std::endl;
 }
