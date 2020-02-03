@@ -16,4 +16,6 @@
 16_def_decl.cpp                  - ~split declarations and definitions
 17_date.h 17_date.cpp main.cpp   - ~split into separate files w/guard
 
+20_test_shadow.cpp through 24_   - Explore shadowing and name conflicts
+
 Makefile                         - Add for separate compilation

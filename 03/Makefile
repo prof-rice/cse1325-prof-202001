@@ -76,8 +76,29 @@ info:
 	-$(CXX) $(CXXFLAGS) -o 17_main 17_main.o 17_date.o
 	@printf "Now type ./17_main to execute the result\n\n"
 
-all:  01_enum 02_named_enum 03_enum_variables 04_enum_to_string 05_enum_to_string_vector 06_enum_to_string_function 07_enum_to_string_switch 08_enum_iteration 10_enum_class 11_enum_class_map 12_struct 13_struct_switch 14_class 15_init_list 16_decl_def 17_main
+20_test_shadow: 20_test_shadow.o 
+	-$(CXX) $(CXXFLAGS) -o 20_test_shadow 20_test_shadow.o 
+	@printf "Now type ./20_test_shadow to execute the result\n\n"
+
+21_test_shadow: 21_test_shadow.o 
+	-$(CXX) $(CXXFLAGS) -o 21_test_shadow 21_test_shadow.o 
+	@printf "Now type ./21_test_shadow to execute the result\n\n"
+
+22_test_shadow: 22_test_shadow.o 
+	-$(CXX) $(CXXFLAGS) -o 22_test_shadow 22_test_shadow.o 
+	@printf "Now type ./22_test_shadow to execute the result\n\n"
+
+23_test_shadow: 23_test_shadow.o 
+	-$(CXX) $(CXXFLAGS) -o 23_test_shadow 23_test_shadow.o 
+	@printf "Now type ./23_test_shadow to execute the result\n\n"
+
+24_test_shadow: 24_test_shadow.o 
+	-$(CXX) $(CXXFLAGS) -o 24_test_shadow 24_test_shadow.o 
+	@printf "Now type ./24_test_shadow to execute the result\n\n"
+
+# NOTE: 23_test_shadow intentionally fails to compile to demonstrate a naming conflict
+all:  01_enum 02_named_enum 03_enum_variables 04_enum_to_string 05_enum_to_string_vector 06_enum_to_string_function 07_enum_to_string_switch 08_enum_iteration 10_enum_class 11_enum_class_map 12_struct 13_struct_switch 14_class 15_init_list 16_decl_def 17_main 20_test_shadow 21_test_shadow 22_test_shadow 24_test_shadow
 
 clean:
-	rm -f *.o *.gch a.out  01_enum 02_named_enum 03_enum_variables 04_enum_to_string 05_enum_to_string_vector 06_enum_to_string_function 07_enum_to_string_switch 08_enum_iteration 10_enum_class 11_enum_class_map 12_struct 13_struct_switch 14_class 15_init_list 16_decl_def 17_main
+	rm -f *.o *.gch a.out  01_enum 02_named_enum 03_enum_variables 04_enum_to_string 05_enum_to_string_vector 06_enum_to_string_function 07_enum_to_string_switch 08_enum_iteration 10_enum_class 11_enum_class_map 12_struct 13_struct_switch 14_class 15_init_list 16_decl_def 17_main 20_test_shadow 21_test_shadow 22_test_shadow 24_test_shadow
 
