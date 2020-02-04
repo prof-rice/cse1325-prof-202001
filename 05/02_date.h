@@ -8,7 +8,7 @@ std::string to_string(Month month);
 
 std::ostream& operator<<(std::ostream& ost, Month month);
 // Add a FUNCTION that overloads the >> operator for type Month
-std::istream& operator>>(std::istream& ost, Month& month);
+std::istream& operator>>(std::istream& ist, Month& month);
 
 class Date {
     int year;
