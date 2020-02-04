@@ -1,5 +1,5 @@
-Bonus
-=====
+Extreme Bonus
+=============
 
 Copy your Bonus solution here, e.g., "``cp ../bonus/*.cpp  ../bonus/*.h .``".
 

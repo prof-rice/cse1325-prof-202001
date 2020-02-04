@@ -1,0 +1,12 @@
+Announcements
+
+P01 - Rubric reworked; expect grades in a day or two
+P02 - Questions?
+Quizzes reminder
+To add them, copy cse1325-prof/01/bash_aliases.txt to your home directory.  Assuming you cloned https://github.com/prof-rice/cse1325-prof.git into your home directory, this command should work:
+    cd ; cp cse1325-prof/01/bash_aliases.txt .bash_aliases
+
+Slides
+
+CSE1325 Lab and SharePoint - Pranav Bhandari and Mengxiao Wang
+

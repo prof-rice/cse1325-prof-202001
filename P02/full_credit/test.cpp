@@ -1,6 +1,5 @@
 // This main program can be used to test your class.
-// **You must COMPLETE both color.h and color.cpp before compiling this!**
-// Then, the provided Makefile will build it for you if you type 'make test'.
+// The provide Makefile will build it for you if you type 'make test'.
 
 #include "color.h"
 #include <iostream>

@@ -1,5 +1,4 @@
-// This is an example of how colorful text is printed to the console.
-// You can compile using "make example", and run with "./example".
+// This is an example of how colorful text is printed to the console
 
 #include <iostream>
 
