@@ -26,8 +26,30 @@ info:
 	-$(CXX) $(CXXFLAGS) -o 04_foo 04_foo.cpp
 	@printf "Now type ./04_foo to execute the result\n\n"
 
-all:  00_foo 01_foo 02_foo 03_foo 04_foo 
+init_bad: init_bad.cpp
+	@printf "==================================================\n"
+	@printf "THIS COMPILE WILL FAIL. Try to understand why. :-)\n"
+	@printf "See also init_good\n"
+	@printf "==================================================\n\n"
+	-$(CXX) $(CXXFLAGS) -o init_bad init_bad.cpp
+
+init_good: init_good.cpp
+	-$(CXX) $(CXXFLAGS) -o init_good init_good.cpp
+	@printf "Now type ./init_good to execute the result\nSee also init_bad\n\n"
+
+ref_attribute_bad: ref_attribute_bad.cpp
+	@printf "==================================================\n"
+	@printf "THIS COMPILE WILL FAIL. Try to understand why. :-)\n"
+	@printf "See also ref_attribute_good\n"
+	@printf "==================================================\n\n"
+	-$(CXX) $(CXXFLAGS) -o ref_attribute_bad ref_attribute_bad.cpp
+
+ref_attribute_good: ref_attribute_good.cpp
+	-$(CXX) $(CXXFLAGS) -o ref_attribute_good ref_attribute_good.cpp
+	@printf "Now type ./ref_attribute_good to execute the result\nSee also ref_attribute_bad\n\n"
+
+all:  00_foo 01_foo 02_foo 03_foo 04_foo ref_attribute_good init_good ref_attribute_bad init_bad
 
 clean:
-	rm -f *.o *.gch a.out  00_foo 01_foo 02_foo 03_foo 04_foo 
+	rm -f *.o *.gch a.out  00_foo 01_foo 02_foo 03_foo 04_foo ref_attribute_good init_good ref_attribute_bad init_bad
 
