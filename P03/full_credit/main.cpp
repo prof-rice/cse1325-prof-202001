@@ -10,7 +10,6 @@ int main() {
               << uta_orange << "UTA Orange" << ' '
               << maroon << "Maroon" << reset << "\n\n";
 
-    int red, green, blue;
     std::cout << "Enter color as (red, green, blue):   "; 
     Color color;
     std::cin >> color;

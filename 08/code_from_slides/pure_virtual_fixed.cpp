@@ -17,5 +17,6 @@ void B::m() {std::cout << "m of B" << std::endl;}
 int main() {
   B b;
   b.x();
+  b.m();
 }
 
