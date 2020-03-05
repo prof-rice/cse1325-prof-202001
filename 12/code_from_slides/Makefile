@@ -1,0 +1,16 @@
+CXXFLAGS += -std=c++17
+GTKFLAGS = `/usr/bin/pkg-config gtkmm-3.0 --cflags --libs`
+
+all: hello_dialog hello_pointer hello_window_label hello_window_button
+
+hello_dialog: hello_dialog.cpp 
+	$(CXX) $(CXXFLAGS) hello_dialog.cpp  $(GTKFLAGS) -o hello_dialog
+hello_pointer: hello_pointer.cpp
+	$(CXX) $(CXXFLAGS) hello_pointer.cpp $(GTKFLAGS) -o hello_pointer
+hello_window_label: hello_window_label.cpp
+	$(CXX) $(CXXFLAGS) hello_window_label.cpp  $(GTKFLAGS) -o hello_window_label
+hello_window_button: hello_window_button.cpp
+	$(CXX) $(CXXFLAGS) hello_window_button.cpp  $(GTKFLAGS) -o hello_window_button
+clean:
+	rm -f *.o *.gch a.out hello_dialog hello_pointer hello_window_label hello_window_button
+
