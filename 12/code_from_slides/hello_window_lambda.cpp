@@ -6,7 +6,6 @@ class Mainwin : public Gtk::Window {
         Mainwin();                 // Adds widgets and signals on launch
         virtual ~Mainwin();        // Deletes unmanaged widgets on window close
     protected:
-        void on_button_clicked();  // To be called when button is clicked
         Gtk::Button *button;       // A button in place of the label
 };
 
@@ -17,13 +16,10 @@ Mainwin::Mainwin() {               // Constructor adds widgets and signals
     // Create a managed Button with centered "Hello, World!" on it
     button = Gtk::manage(new Gtk::Button{"Hello, World!"});
     add(*button);                  // Add the button widget to the window
-    button->signal_clicked().connect([this] {this->on_button_clicked();});
+    button->signal_clicked().connect([] {std::cout << "Clicked!" << std::endl;});
     button->show();                // Make the button visible
 }
 
-void Mainwin::on_button_clicked() {
-    std::cout << "Hello, Window!" << std::endl;
-}
 
 Mainwin::~Mainwin() { }            // Always declare a virtual destructor
 
