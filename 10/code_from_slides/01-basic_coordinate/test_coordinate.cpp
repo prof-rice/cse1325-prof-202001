@@ -28,7 +28,7 @@ int main() {
   int result = 0;       // Set to non-zero code if failed
   int test_vector = 1;  // First error code
 
-  std::string expected = "(0,0)  (0,3)  (0,6)  (2,0)  (2,3)  (2,6)  (4,0)  (4,3)  (4,6)  ";
+  std::string expected = "(0,0)  (0,3)  (0,7)  (2,0)  (2,3)  (2,6)  (4,0)  (4,3)  (4,6)  ";
   std::string actual = "";
 
   for(int x = 0; x < 3; ++x) {

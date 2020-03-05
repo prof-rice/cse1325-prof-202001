@@ -23,6 +23,7 @@ Coin& Coin::operator=(Coin const& rhs) {
         _notes = nullptr;
         if(rhs._notes) _notes = new std::string{*rhs._notes};
     }
+    return *this;
 }
 Coin::~Coin() {
     LOG("Coin::~Coin");
