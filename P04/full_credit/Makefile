@@ -2,6 +2,8 @@ CXXFLAGS += --std=c++17
 
 all: coin
 
+rebuild: clean all
+
 logger: CXXFLAGS += -DLOGGER
 logger: coin
 
