@@ -1,7 +1,7 @@
 #include "mainwin.h"
 #include <iostream> // for std::cerr logging
 
-Mainwin::Mainwin() {
+Mainwin::Mainwin() : nim{nullptr} {
 
     // /////////////////
     // G U I   S E T U P
@@ -216,7 +216,7 @@ void Mainwin::set_sticks() {
         if (computer_player->get_active() && nim->current_player() == 2) {
            int move = 1;
            try {
-               int move = nim->optimal_move();  // "Impossible" exception warning
+               move = nim->optimal_move();      // "Impossible" exception warning
            } catch(std::exception& e) {         // If it happens, log an error
                std::cerr << "Invalid optimal move: " << e.what() << std::endl;
            }
