@@ -18,8 +18,8 @@ Mainwin::Mainwin() {
     // M E N U
     // Add a menu bar as the top item in the vertical box
     Gtk::MenuBar *menubar = Gtk::manage(new Gtk::MenuBar);
-    // vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
-    vbox->add(*menubar);
+    vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
+    // vbox->add(*menubar);
 
     //     F I L E
     // Create a File menu and add to the menu bar
@@ -63,7 +63,8 @@ Mainwin::Mainwin() {
     // T O O L B A R
     // Add a toolbar to the vertical box below the menu
     Gtk::Toolbar *toolbar = Gtk::manage(new Gtk::Toolbar);
-    vbox->add(*toolbar);
+    vbox->pack_start(*toolbar, Gtk::PACK_SHRINK, 0);
+    // vbox->add(*toolbar);
 
     //     N E W   G A M E
     // Add a new game icon
@@ -73,7 +74,7 @@ Mainwin::Mainwin() {
     toolbar->append(*new_game_button);
 
     //     O N E   S T I C K
-    // Add an icon for taking one stick - NEW
+    // Add an icon for taking one stick
     Gtk::Image* button1_image = Gtk::manage(new Gtk::Image{"button1.png"});
     button1 = Gtk::manage(new Gtk::ToolButton(*button1_image));
     button1->set_tooltip_markup("Select one stick");
@@ -81,7 +82,7 @@ Mainwin::Mainwin() {
     toolbar->append(*button1);
 
     //     T W O   S T I C K S
-    // Add an icon for taking two sticks - NEW
+    // Add an icon for taking two sticks
     Gtk::Image* button2_image = Gtk::manage(new Gtk::Image{"button2.png"});
     button2 = Gtk::manage(new Gtk::ToolButton(*button2_image));
     button2->set_tooltip_markup("Select two sticks");
@@ -89,7 +90,7 @@ Mainwin::Mainwin() {
     toolbar->append(*button2);
 
     //     T H R E E   S T I C K S
-    // Add an icon for taking three sticks - NEW
+    // Add an icon for taking three sticks
     Gtk::Image* button3_image = Gtk::manage(new Gtk::Image{"button3.png"});
     button3 = Gtk::manage(new Gtk::ToolButton(*button3_image));
     button3->set_tooltip_markup("Select three sticks");
@@ -132,7 +133,8 @@ Mainwin::Mainwin() {
     // Provide a status bar for game messages
     msg = Gtk::manage(new Gtk::Label());
     msg->set_hexpand(true);
-    vbox->add(*msg);
+    vbox->pack_start(*msg, Gtk::PACK_SHRINK, 0);
+    // vbox->add(*msg);
 
     // Make the box and everything in it visible
     vbox->show_all();
