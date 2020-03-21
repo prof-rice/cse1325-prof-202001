@@ -1,4 +1,5 @@
 #include "mainwin.h"
+#include <iostream> // for std::cerr logging
 
 Mainwin::Mainwin() {
 
@@ -7,7 +8,7 @@ Mainwin::Mainwin() {
     // /////////////////
 
     set_default_size(400, 200);
-    set_title("Nim");
+    set_title("The Game of Nim");
 
     // Put a vertical box container as the Window contents
     Gtk::Box *vbox = Gtk::manage(new Gtk::VBox);
@@ -17,7 +18,8 @@ Mainwin::Mainwin() {
     // M E N U
     // Add a menu bar as the top item in the vertical box
     Gtk::MenuBar *menubar = Gtk::manage(new Gtk::MenuBar);
-    vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
+    // vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
+    vbox->add(*menubar);
 
     //     F I L E
     // Create a File menu and add to the menu bar
@@ -72,7 +74,7 @@ Mainwin::Mainwin() {
 
     //     O N E   S T I C K
     // Add an icon for taking one stick - NEW
-    Gtk::Image* button1_image = Gtk::manage(new Gtk::Image{"button1_on.png"});
+    Gtk::Image* button1_image = Gtk::manage(new Gtk::Image{"button1.png"});
     button1 = Gtk::manage(new Gtk::ToolButton(*button1_image));
     button1->set_tooltip_markup("Select one stick");
     button1->signal_clicked().connect([this] {this->on_button_click(1);});
@@ -80,7 +82,7 @@ Mainwin::Mainwin() {
 
     //     T W O   S T I C K S
     // Add an icon for taking two sticks - NEW
-    Gtk::Image* button2_image = Gtk::manage(new Gtk::Image{"button2_on.png"});
+    Gtk::Image* button2_image = Gtk::manage(new Gtk::Image{"button2.png"});
     button2 = Gtk::manage(new Gtk::ToolButton(*button2_image));
     button2->set_tooltip_markup("Select two sticks");
     button2->signal_clicked().connect([this] {this->on_button_click(2);});
@@ -88,37 +90,40 @@ Mainwin::Mainwin() {
 
     //     T H R E E   S T I C K S
     // Add an icon for taking three sticks - NEW
-    Gtk::Image* button3_image = Gtk::manage(new Gtk::Image{"button3_on.png"});
+    Gtk::Image* button3_image = Gtk::manage(new Gtk::Image{"button3.png"});
     button3 = Gtk::manage(new Gtk::ToolButton(*button3_image));
     button3->set_tooltip_markup("Select three sticks");
     button3->signal_clicked().connect([this] {this->on_button_click(3);});
     toolbar->append(*button3);
 
     //     C O M P U T E R   P L A Y E R
+    // Add a little space between the 3 stick buttons and computer player
+    Gtk::SeparatorToolItem *sep1 = Gtk::manage(new Gtk::SeparatorToolItem());
+    toolbar->append(*sep1);
+
     // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *robot_image = Gtk::manage(new Gtk::Image{"freepik_robot.png"});
     computer_player = Gtk::manage(new Gtk::ToggleToolButton(*robot_image));
     computer_player->set_tooltip_markup("Enable for computer to be Player 2");
     computer_player->signal_clicked().connect([this] {this->on_computer_player_click();});
-    Gtk::SeparatorToolItem *sep1 = Gtk::manage(new Gtk::SeparatorToolItem());
-    toolbar->append(*sep1);
     toolbar->append(*computer_player);
 
     //     Q U I T
+    // Push the quit botton all the way to the right by setting set_expand true
+    Gtk::SeparatorToolItem *sep = Gtk::manage(new Gtk::SeparatorToolItem());
+    sep->set_expand(true);
+    toolbar->append(*sep);
+
     // Add a icon for quitting
     Gtk::ToolButton *quit_button = Gtk::manage(new Gtk::ToolButton(Gtk::Stock::QUIT));
     quit_button->set_tooltip_markup("Exit game");
     quit_button->signal_clicked().connect([this] {this->on_quit_click();});
-    Gtk::SeparatorToolItem *sep = Gtk::manage(new Gtk::SeparatorToolItem());
-    sep->set_expand(true);  // The expanding sep forces the Quit button to the right
-    toolbar->append(*sep);
     toolbar->append(*quit_button);
 
     // /////////////////////////// ////////////////////////////////////////////
     // S T I C K S   D I S P L A Y
     // Provide a text entry box to show the remaining sticks
     sticks = Gtk::manage(new Gtk::Label());
-    // sticks->set_has_frame(false);
     sticks->set_hexpand(true);
     sticks->set_vexpand(true);
     vbox->add(*sticks);
@@ -144,9 +149,13 @@ Mainwin::~Mainwin() { }
 
 // COMBINED observer / callback
 void Mainwin::on_button_click(int button) {
-    // TODO: What to do with "impossible" out of sticks exception?
-    nim->take_sticks(button);
-    set_sticks();
+    try {
+        // Catch the "impossible" out of sticks exception
+        nim->take_sticks(button);
+        set_sticks();
+    } catch(std::exception& e) {
+        sticks->set_markup("<b>FAIL:</b> " + std::string{e.what()} + ", start new game");
+    }
 }
 
 void Mainwin::on_computer_player_click() {
@@ -154,6 +163,7 @@ void Mainwin::on_computer_player_click() {
 }
 
 void Mainwin::on_new_game_click() {
+    delete nim;
     nim = new Nim();
     set_sticks();
 }
@@ -179,7 +189,7 @@ void Mainwin::on_about_click() {
     dialog.set_program_name("Nim");
     auto logo = Gdk::Pixbuf::create_from_file("128px-Pyramidal_matches.png");
     dialog.set_logo(logo);
-    dialog.set_version("Version 1.2.0");
+    dialog.set_version("Version 1.2.1");
     dialog.set_copyright("Copyright 2017-2020");
     dialog.set_license_type(Gtk::License::LICENSE_GPL_3_0);
     std::vector< Glib::ustring > authors = {"George F. Rice"};
@@ -202,8 +212,14 @@ void Mainwin::set_sticks() {
     // If the robot is enabled and it's their turn, move the robot
     if (nim->sticks_left() > 0) {
         if (computer_player->get_active() && nim->current_player() == 2) {
-           s += "Robot plays " + std::to_string(nim->optimal_move()) + ", ";
-           nim->take_sticks(nim->optimal_move()); 
+           int move = 1;
+           try {
+               int move = nim->optimal_move();  // "Impossible" exception warning
+           } catch(std::exception& e) {         // If it happens, log an error
+               std::cerr << "Invalid optimal move: " << e.what() << std::endl;
+           }
+           s += "Robot plays " + std::to_string(move) + ", ";
+           nim->take_sticks(move); 
         }
     }
 

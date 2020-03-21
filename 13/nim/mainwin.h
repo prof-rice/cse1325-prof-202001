@@ -1,5 +1,5 @@
-#ifndef Mainwin_H
-#define Mainwin_H
+#ifndef __MAINWIN_H
+#define __MAINWIN_H
 
 #include <gtkmm.h>
 #include "nim.h"
