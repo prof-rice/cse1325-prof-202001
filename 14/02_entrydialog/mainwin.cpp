@@ -11,7 +11,8 @@ Mainwin::Mainwin() : button{new Gtk::Button{"Hello, world!"}} {
 Mainwin::~Mainwin() { }
 
 void Mainwin::on_button_click() {
-    EntryDialog edialog{*this, "What shall we display today?"};
+    EntryDialog edialog{*this, "<big>EntryDialog Demo</big>", true};
+    edialog.set_secondary_text("What <i>shall</i> we display <b>today</b>?", true);
     edialog.set_text("Nothing to report...");
     edialog.run();
 
