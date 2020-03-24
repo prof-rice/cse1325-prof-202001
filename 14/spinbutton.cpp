@@ -24,7 +24,7 @@ Mainwin::Mainwin()
     // https://developer.gnome.org/gtkmm-tutorial/stable/sec-spinbutton.html.en
     vbox->pack_start(*spinbutton);
     spinbutton->set_range(0.0, 1000.0);
-    spinbutton->set_increments(1.0, 1.0);
+    spinbutton->set_increments(1.0, 25.0);
     spinbutton->signal_value_changed().connect([this] {this->on_spinbutton_value_changed();});
 
     // https://developer.gnome.org/gtkmm/stable/classGtk_1_1Label.html

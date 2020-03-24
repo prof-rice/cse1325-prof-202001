@@ -42,7 +42,9 @@ Mainwin::Mainwin()
 Mainwin::~Mainwin() { }
 
 void Mainwin::on_radiobutton_click(int button) {
-    Gtk::MessageDialog{*this, "Radio Button " + std::to_string(button)}.run();
+    Gtk::RadioButton* radiobutton = ((button == 1) ? radiobutton1 : radiobutton2);
+    Gtk::MessageDialog{*this, "Radio Button " + std::to_string(button) +
+                       (radiobutton->get_active() ? " active" : " inactive")}.run();
 }
 
 int main(int argc, char* argv[]) {
