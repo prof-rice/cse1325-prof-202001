@@ -31,24 +31,43 @@ Command? )";
 
         // ORDER A NEW COMPUTER
         } else if(cmd == 'O') {
-            for(int i=0; i<store.num_customers(); ++i) 
-                std::cout << i << ") " << store.customer(i) << '\n';
-            std::cout << "Customer? ";
-            int customer;
-            std::cin >> customer; std::cin.ignore(32767, '\n');
+            int customer = -1;
+            int order    = -1;
+            int desktop  = -1;
+            try {
+                for(int i=0; i<store.num_customers(); ++i) 
+                    std::cout << i << ") " << store.customer(i) << '\n';
+                std::cout << "Customer? ";
+                std::cin >> customer; std::cin.ignore(32767, '\n');
+                std::cout << store.customer(customer) << '\n';
 
-            int order = store.new_order(customer);
+                order = store.new_order(customer);
+                std::cout << "Order " << order 
+                          << " created for Customer " << customer << std::endl;
+                desktop = 0;
+            } catch(std::exception& e) {
+                std::cerr << "#### UNABLE TO CREATE ORDER FOR CUSTOMER " 
+                          << customer << " ####\n\n"; 
+            }
 
-            while(true) {
+            while(desktop >= 0) {
                 for(int i=0; i<store.num_desktops(); ++i) 
                     std::cout << i << ") " << store.desktop(i) << '\n';
                 std::cout << "Desktop (-1 when done)? ";
-                int desktop;
                 std::cin >> desktop; std::cin.ignore(32767, '\n');
                 if(desktop == -1) break;
-                store.add_desktop(desktop, order);
+                try {
+                    store.add_desktop(desktop, order);
+                } catch (std::exception& e) {
+                    std::cerr << "#### UNABLE TO ADD DESKTOP " << desktop
+                              << " TO ORDER " << order << std::endl;
+                    desktop = 0;
+                }
             }
-            std::cout << "\n++++ Order Placed ++++\n" << store.order(order);
+
+            if(order >= 0)
+                std::cout << "\n++++ Order " << order << " Placed ++++\n" 
+                          << store.order(order);
 
         // LIST CUSTOMERS
         } else if (cmd == 'c') {
@@ -106,9 +125,14 @@ Command? )";
             std::getline(std::cin, s);
             std::cout << "Cost? ";
             double cost;
-            std::cin >> cost;
-            Options option{s, cost};
-            store.add_option(option);
+            if (std::cin >> cost) {
+                Options option{s, cost};
+                store.add_option(option);
+            } else {
+                std::cin.clear();
+                std::cerr << "#### INVALID PRICE ####\n\n";
+                std::cin.ignore(32767, '\n');
+            }
 
         // QUIT
         } else if (toupper(cmd) == 'Q') {
