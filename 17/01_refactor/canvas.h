@@ -12,7 +12,6 @@ class Canvas : public Gtk::DrawingArea {
   protected:
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr) override;
     std::vector<Shape*> shapes;
-    int updates = 0;
 };
 }
 #endif
