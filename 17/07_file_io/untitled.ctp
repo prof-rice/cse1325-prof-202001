@@ -1,5 +1,3 @@
-N9Graph_lib4LineE 2 207 128 502 128 rgb(0,0,255) 1 
-N9Graph_lib4LineE 2 362 68 363 243 rgb(0,0,255) 1 
-N9Graph_lib4LineE 2 563 143 253 268 rgb(113,8,67) 3.8 
-N9Graph_lib4LineE 2 503 316 176 89 rgb(113,8,67) 3.8 
-N9Graph_lib4LineE 2 414 80 226 243 rgb(28,20,124) 10 
+N9Graph_lib4LineE 2 88 27 138 82 rgb(77,192,72) 10 
+N9Graph_lib4LineE 2 169 34 48 85 rgb(28,20,124) 6 
+N9Graph_lib4LineE 2 57 44 196 66 rgb(204,0,0) 1 

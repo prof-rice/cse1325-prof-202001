@@ -13,7 +13,7 @@ const std::vector<dash_pattern> dashes = { // The available dash patterns
  {8.0, 0.0},
  {8.0, 8.0},
  {8.0, 4.0},
- {8.0, 4.0, 4.0, 4.0},
+ {8.0, 4.0, 2.0, 4.0},
 };
 
 // A shape holds points connected by lines

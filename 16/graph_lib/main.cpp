@@ -62,6 +62,7 @@ int main(int argc, char** argv) {
    c.add_shape(l);
    std::cout << "Line part of X " << l << std::endl;
 
+
    // Graph some functions (mostly with lambdas)
    Graph_lib::Function f{cos, Graph_lib::Point{-250,0}, 0.0, 3.14*6, 160, 25, 25};
    c.add_shape(f);

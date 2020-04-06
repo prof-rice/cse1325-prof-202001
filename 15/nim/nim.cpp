@@ -13,6 +13,7 @@ Nim::Nim() {
 
 Nim::Nim(std::istream& ist) {
    ist >> _sticks >> _current_player;
+   ist.ignore(32767, '\n');
 }
 
 void Nim::save(std::ostream& ost) {

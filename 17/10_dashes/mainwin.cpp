@@ -236,6 +236,7 @@ void Mainwin::on_new_painting_click() {
 void Mainwin::on_save_click() {
     try {
         std::ofstream ofs{canvas->get_filename()};
+        ofs << TITLE << '\n' << VERSION << '\n';
         canvas->save(ofs);
     } catch(std::exception e) {
         Gtk::MessageDialog{*this, "Unable to save data", false, Gtk::MESSAGE_ERROR}.run();
@@ -302,6 +303,11 @@ void Mainwin::on_open_click() {
     if (result == 1) {
         try {
             std::ifstream ifs{dialog.get_filename()};
+            std::string title, version;
+            std::getline(ifs, title);
+            std::getline(ifs, version);
+            if(title != TITLE || version != VERSION)
+                throw std::runtime_error{"Not an " + EXT + " file"};
             canvas->load(ifs);
         } catch (std::exception& e) {
             Gtk::MessageDialog{*this, "Unable to open painting", false, Gtk::MESSAGE_ERROR}.run();

@@ -43,6 +43,10 @@ void Canvas::load(std::istream& ist) {
             Line l{ist}; 
             add_shape(l);
         }
+        if (typetag == "N9Graph_lib8PolylineE") {
+            Polyline p{ist};
+            add_shape(p);
+        }
     }
     dirty = was_dirty;
     queue_draw();  // Now update the display with the new data
@@ -135,8 +139,8 @@ bool Canvas::on_button_press_event(GdkEventButton * event) {
                         add_shape(polyline);
                     }
                     add_point(p2); // to most recently added shape
-                    x1 = event->x; // for rubber banding
-                    y1 = event->y;
+                    x1 = x2; // for rubber banding
+                    y1 = y2;
                 }
             }
         }
