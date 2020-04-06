@@ -233,7 +233,7 @@ void Mainwin::on_save_as_click() {
             ofs << computer_player->get_active() << std::endl;
             if(!ofs) throw std::runtime_error{"Error writing file"};
         } catch(std::exception& e) {
-            Gtk::MessageDialog{*this, "Unable to save game: "}.run();
+            Gtk::MessageDialog{*this, "Unable to save game"}.run();
         }
     }
 }

@@ -1,7 +1,7 @@
 #ifndef __MAINWIN_H
 #define __MAINWIN_H
 
-#include <gtkmm.h>
+#include "canvas.h"
 
 const std::string TITLE = "CSE1325 Paint";
 const std::string VERSION = "2.0.0";
@@ -18,7 +18,7 @@ class Mainwin : public Gtk::Window {
         void on_about_click();             // Display About dialog
         void on_quit_click();              // Exit the game
     private:
-        Gtk::DrawingArea* canvas;          // The painting
+        Graph_lib::Canvas* canvas;         // The painting
         Gtk::Label *msg;                   // Status message display
 };
 #endif 

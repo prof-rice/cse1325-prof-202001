@@ -92,14 +92,14 @@ Mainwin::Mainwin() {
 
     // C A N V A S
     // Provide a DrawingArea on which to paint
-    canvas = Gtk::manage(new Graph_lib::Canvas);
+    canvas = Gtk::manage(new Graph_lib::Canvas{});
     canvas->set_hexpand(true);
     canvas->set_vexpand(true);
-    vbox->pack_start(*canvas, Gtk::PACK_SHRINK, 0);
+    vbox->pack_start(*canvas, Gtk::PACK_EXPAND_WIDGET, 0);
     
     // S T A T U S   B A R   D I S P L A Y
     // Provide a status bar for messages
-    msg = Gtk::manage(new Gtk::Label());
+    msg = Gtk::manage(new Gtk::Label{"Welcome to CSE1325 Paint!"});
     msg->set_hexpand(true);
     vbox->pack_start(*msg, Gtk::PACK_SHRINK, 0);
 
