@@ -3,7 +3,7 @@
 
 namespace Graph_lib {   // our graphics interface
 
-Canvas::Canvas() : Gtk::DrawingArea(), dirty{false}, click_in_progress{false}, rubber_band{nullptr} {
+Canvas::Canvas() : Gtk::DrawingArea(), dirty{false}, click_in_progress{false} {
     add_events(Gdk::BUTTON_PRESS_MASK);  // Notify on mouse click
 }
 
