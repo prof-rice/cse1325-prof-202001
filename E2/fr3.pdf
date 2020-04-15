@@ -1,0 +1,960 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<< /F1 2 0 R /F2 3 0 R /F3 4 0 R >>
+endobj
+2 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+3 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+4 0 obj
+<< /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font >>
+endobj
+5 0 obj
+<< /Contents 12 0 R /MediaBox [ 0 0 612 792 ] /Parent 11 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+6 0 obj
+<< /Contents 13 0 R /MediaBox [ 0 0 612 792 ] /Parent 11 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+7 0 obj
+<< /Contents 14 0 R /MediaBox [ 0 0 612 792 ] /Parent 11 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+8 0 obj
+<< /Contents 15 0 R /MediaBox [ 0 0 612 792 ] /Parent 11 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+9 0 obj
+<< /Outlines 16 0 R /PageLabels 17 0 R /PageMode /UseNone /Pages 11 0 R /Type /Catalog >>
+endobj
+10 0 obj
+<< /Author () /CreationDate (D:20200408173009+06'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20200408173009+06'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title () /Trapped /False >>
+endobj
+11 0 obj
+<< /Count 4 /Kids [ 5 0 R 6 0 R 7 0 R 8 0 R ] /Type /Pages >>
+endobj
+12 0 obj
+<< /Length 5332 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 703.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 681.9339 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 661.9339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 598.9339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 568.9339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large triangle roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 550.9339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(5,17,254\) and 1 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 532.9339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable triangle is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 504.5874 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 486.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 465.3874 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 445.3874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 382.3874 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 352.3874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large X roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 334.3874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(225,13,11\) and 2 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 316.3874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable X is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 288.0409 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 270.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 248.8409 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 228.8409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 165.8409 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 135.8409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large + roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 117.8409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(225,13,11\) and 3 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 99.84094 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable + is fine.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+13 0 obj
+<< /Length 5194 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 686.7874 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 668.7874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 647.5874 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 627.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 564.5874 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 534.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large + roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 516.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(5,17,254\) and 4 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 498.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable + is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 470.2409 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 452.2409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 431.0409 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 411.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 348.0409 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 318.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large + roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 300.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(7,240,3\) and 5 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 282.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable + is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 253.6945 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 235.6945 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 214.4945 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 194.4945 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 131.4945 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 101.4945 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large triangle roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 83.49449 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(7,240,3\) and 6 pixels wide.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+14 0 obj
+<< /Length 5245 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 703.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable triangle is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 674.7874 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 656.7874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 635.5874 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 615.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 552.5874 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 522.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large X roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 504.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(5,17,254\) and 7 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 486.5874 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable X is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 458.2409 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 440.2409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 419.0409 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 399.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 336.0409 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 306.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large X roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 288.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(7,240,3\) and 8 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 270.0409 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable X is fine.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 241.6945 cm
+n 0 14.17323 m 486.6142 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 223.6945 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Consider the following code in canvas.h.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 202.4945 cm
+q
+Q
+Q
+q
+1 0 0 1 62.69291 182.4945 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (#) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 119.4945 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 50 Tm  T* ET
+q
+1 0 0 1 20 48 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (class Canvas : ) Tj /F3 10 Tf 0 0 0 rg (public Gtk::DrawingArea {) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 18 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 17 Tm  T* ET
+q
+1 0 0 1 20 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (protected:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (bool on_draw\(const Cairo::RefPtr) Tj (<) Tj (Cairo::Context) Tj (>) Tj (& cr\) override;) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (};) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 89.49449 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .940379 Tw (Write Canvas::on_draw \(which overrides Gtk::DrawingArea::on_draw\) such that the main window displays a) Tj T* 0 Tw (large triangle roughly 100 x 100 pixels in overall size.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+15 0 obj
+<< /Length 411 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 703.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Make the lines of RGB color \(225,13,11\) and 9 pixels wide.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 685.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Don't waste time getting the shape or size exactly right - a rough but clearly recognizable triangle is fine.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+16 0 obj
+<< /Count 0 /Type /Outlines >>
+endobj
+17 0 obj
+<< /Nums [ 0 18 0 R 1 19 0 R 2 20 0 R 3 21 0 R ] >>
+endobj
+18 0 obj
+<< /S /D /St 1 >>
+endobj
+19 0 obj
+<< /S /D /St 2 >>
+endobj
+20 0 obj
+<< /S /D /St 3 >>
+endobj
+21 0 obj
+<< /S /D /St 4 >>
+endobj
+xref
+0 22
+0000000000 65535 f
+0000000075 00000 n
+0000000129 00000 n
+0000000239 00000 n
+0000000354 00000 n
+0000000472 00000 n
+0000000671 00000 n
+0000000870 00000 n
+0000001069 00000 n
+0000001268 00000 n
+0000001376 00000 n
+0000001638 00000 n
+0000001719 00000 n
+0000007108 00000 n
+0000012359 00000 n
+0000017661 00000 n
+0000018128 00000 n
+0000018178 00000 n
+0000018249 00000 n
+0000018286 00000 n
+0000018323 00000 n
+0000018360 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com)
+ [(\363\223[\013\366"+\227\307!\207\(\346\265V\226) (\363\223[\013\366"+\227\307!\207\(\346\265V\226)]
+ /Info 10 0 R /Root 9 0 R /Size 22 >>
+startxref
+18397
+%%EOF
