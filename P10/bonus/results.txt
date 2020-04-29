@@ -1,0 +1,73 @@
+QUESTION 1: Which value of slices did you select for your machine to solve the polynomial with 1 thread with at least a 30 second runtime: 
+
+
+QUESTION 2: Provide the output of ``time polyb nn`` (or the improved version in the lecture video, if you prefer) for the following values of nn threads shown below:
+
+Example Timing:
+
+real	0m22.551s
+user	0m22.524s
+sys	0m0.012s
+
+
+YOUR Timing:
+
+Without threads:
+
+
+
+
+With 2 threads:
+
+
+
+
+
+
+With 4 threads:
+
+
+
+
+
+
+With 6 threads:
+
+
+
+
+
+
+With 8 threads:
+
+
+
+
+
+
+With 12 threads:
+
+
+
+
+
+
+With 24 threads:
+
+
+
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+
+
+
+
+
+QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+
+
+
+
+
+

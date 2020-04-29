@@ -3,6 +3,8 @@
 
 #include <map>
 #include <sstream>
+#include <codecvt>   // for codecvt_utf8
+#include <locale>    // for wstring_convert
 
 Term::Term(double coefficient, double exponent) : _coeff{coefficient}, _exp{exponent} { }
 Term::Term(std::istream& ist) {ist >> _coeff >> _exp;}
@@ -25,14 +27,18 @@ std::ostream& operator<<(std::ostream& ost, const Term& term) {
     else                       ost << term._coeff;
 
     if(term._exp == 0) return ost;
-
     ost << 'x';
+
     if(term._exp == 1) return ost;
 
-    // EXTREME BONUS: Print the exponent as Unicode exponent characters
-    //   found at https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
+    std::ostringstream oss;
+    oss << term._exp;
+    std::u16string s;
+    for(auto& c : oss.str()) s += subs.at(c);
 
-    ost << '^' << term._exp;
+    std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> cv;
+    ost << cv.to_bytes(s);
+
     return ost;
 }
 

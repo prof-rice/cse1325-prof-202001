@@ -1,72 +1,81 @@
-QUESTION 1: Which value of slices did you select for your machine to solve the polynomial with 1 thread with at least a 30 second runtime: 
+QUESTION 1: Which value of slices did you select for your machine to solve the polynomial with 1 thread with at least a 30 second runtime: 150000000
 
 
 QUESTION 2: Provide the output of ``time polyb nn`` (or the improved version in the lecture video, if you prefer) for the following values of nn threads shown below:
 
 Example Timing:
 
-real	0m22.551s
-user	0m22.524s
-sys	0m0.012s
+real	0m30.628s
+user	0m30.554s
+sys	0m0.004s
 
 
 YOUR Timing:
 
 Without threads:
 
-
+real	0m30.628s
+user	0m30.554s
+sys	0m0.004s
 
 
 With 2 threads:
 
-
-
-
+real	0m16.139s
+user	0m30.956s
+sys	0m0.008s
 
 
 With 4 threads:
 
-
-
-
+real	0m10.851s
+user	0m34.539s
+sys	0m0.052s
 
 
 With 6 threads:
 
-
-
-
-
+real	0m10.553s
+user	0m34.953s
+sys	0m0.044s
 
 With 8 threads:
 
-
-
-
+real	0m10.407s
+user	0m34.818s
+sys	0m0.048s
 
 
 With 12 threads:
 
-
-
-
+real	0m10.638s
+user	0m34.935s
+sys	0m0.036s
 
 
 With 24 threads:
 
-
-
+real	0m10.375s
+user	0m34.960s
+sys	0m0.049s
 
 
 QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
 
+Speed maxed out at 4 threads, which is how many cores my processor supports. This is consistent with Amdahl's Law:
 
+S(n) = T(1)/T(n) = T(1) / (T(1)(B + (1-B)/n))
 
+Where S(n) is the theoretical speedup
+      T(n) is the time the algorithm takes to finish running on n threads
+      B is the faction of the algorithm that can be run in parallel, from 0.0 to 1.0
+
+Read more at https://www.pugetsystems.com/labs/articles/Estimating-CPU-Performance-using-Amdahls-Law-619/
 
 
 QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
 
-
+System load increased until max cores were engaged, then it didn't change. Tracking threads appears to take little overhead, but managing cores appeared to add measurable (though small) overhead
 
 
 

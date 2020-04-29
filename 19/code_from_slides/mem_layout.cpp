@@ -9,7 +9,7 @@ public:
 class Child : public Parent {
 public:
     int c, d;
-    virtual void foo()
+    void foo() override
       {std::cout << "child" << std::endl;}
 };
 
