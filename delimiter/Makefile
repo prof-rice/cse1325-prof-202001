@@ -7,9 +7,11 @@ debug: alls
 
 delim: delim.cpp
 	-$(CXX) $(CXXFLAGS) delim.cpp -o delim
+delims: delims.cpp
+	-$(CXX) $(CXXFLAGS) delims.cpp -o delims
 
-alls:  delim
+alls:  delim delims
 
 clean:
-	rm -f *.o *.gch a.out  delim
+	rm -f *.o *.gch a.out  delim delims
 
